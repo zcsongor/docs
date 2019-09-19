@@ -1,0 +1,33 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Infinite Loop Detected',
+  description: 'An infinite loop was detected within the application.',
+  editUrl: 'pages/docs/error/application/INFINITE_LOOP_DETECTED.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Application Error
+
+An infinite loop was detected within the application.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>INFINITE_LOOP_DETECTED</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- Check the application's source code for a redirect loop.
+- Check the application's `now.json` [Routes](/docs/v2/advanced/routes) for a redirect loop.
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

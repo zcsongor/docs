@@ -1,0 +1,33 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Invalid Request Method',
+  description:
+    'The application errored when recieving a request other than `GET` or `HEAD`',
+  editUrl: 'pages/docs/error/application/INVALID_REQUEST_METHOD.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Application Error
+
+An error occurred in the application when requesting a static resource with a request type other than `GET` or `HEAD`.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>INVALID_REQUEST_METHOD</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- Check your client application logic or `cURL` command for a request type other than a `GET` or `HEAD`.
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

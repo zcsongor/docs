@@ -1,0 +1,32 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Deployment Blocked',
+  description: 'The requested deployment was blocked.',
+  editUrl: 'pages/docs/error/platform/DEPLOYMENT_BLOCKED.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Platform Error
+
+The deployment was blocked by the platform infrastructure layer.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>DEPLOYMENT_BLOCKED</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- **[Contact Support](mailto:support@zeit.co)** to see why your deployment was blocked and how to resolve it.
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

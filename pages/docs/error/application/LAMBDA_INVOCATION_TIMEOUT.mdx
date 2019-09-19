@@ -1,0 +1,36 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Serverless Function (Lambda) Invocation Timeout',
+  description:
+    'The requested Serverless Function reached the request timeout threshold.',
+  editUrl: 'pages/docs/error/application/LAMBDA_INVOCATION_TIMEOUT.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Application Error
+
+The request for a Serverless Function reached the timeout threshold. This is an application error.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>LAMBDA_INVOCATION_TIMEOUT</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- A common cause for this issue is when the application contains an unhandled exception. Check the application logs, which can be found at the host URL under [the `/_logs` path](/docs/v2/advanced/concepts/special-paths#logs-view), for example:
+  ```
+  https://my-deployment-lwbxweoqjo.now.sh/_logs
+  ```
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

@@ -1,0 +1,38 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: '1.0 No Scaled Deployments',
+  description:
+    'The application recieved more traffic than the scale settings accomodate.',
+  editUrl: 'pages/docs/error/application/V1_NO_SCALED_DEPLOYMENTS.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Application Error
+
+An error occurred with the application because it receive more traffic than the current scale settings could handle.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>V1_NO_SCALED_DEPLOYMENTS</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- Try increasing the scale settings on your application:
+  ```
+  // scale up to 10 instances
+  now scale my-deployment-lwbxweoqjo.now.sh 10
+  ```
+- For more help try `now scale --help` or check out the [Now Scaling Documentation](/docs/v1/getting-started/scaling).
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

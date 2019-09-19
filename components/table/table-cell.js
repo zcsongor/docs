@@ -63,6 +63,8 @@ class TableHeadCell extends Component {
       ...other
     } = this.props
 
+    console.log(children)
+
     return createElement(
       'th',
       {
@@ -78,9 +80,11 @@ class TableHeadCell extends Component {
         ),
         ref: innerRef
       },
-      !isComponentOfType('div', children)
-        ? createElement('div', {}, children)
-        : children
+      typeof children !== 'undefined'
+        ? !isComponentOfType('div', children)
+          ? createElement('div', {}, children)
+          : children
+        : null
     )
   }
 }

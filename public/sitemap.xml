@@ -304,12 +304,24 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://zeit.co/docs/v2/.DS_Store/</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://zeit.co/docs/v2/advanced/.DS_Store/</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://zeit.co/docs/v2/advanced/builders/</loc>
     <lastmod>2019-09-18T16:02:35.000Z</lastmod>
     <changefreq>hourly</changefreq>
   </url>
   <url>
     <loc>https://zeit.co/docs/v2/advanced/builds/</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://zeit.co/docs/v2/advanced/concepts/.DS_Store/</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -379,6 +391,10 @@
   <url>
     <loc>https://zeit.co/docs/v2/advanced/now-for-gitlab/</loc>
     <lastmod>2019-08-22T10:47:21.000Z</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://zeit.co/docs/v2/advanced/platform/.DS_Store/</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
@@ -558,6 +574,10 @@
   <url>
     <loc>https://zeit.co/docs/v2/serverless-functions/supported-languages/</loc>
     <lastmod>2019-09-06T06:39:01.000Z</lastmod>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://zeit.co/guides/.DS_Store/</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>

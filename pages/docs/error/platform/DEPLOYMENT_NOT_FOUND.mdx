@@ -1,0 +1,35 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Deployment Not Found',
+  description: 'The requested deployment was not found.',
+  editUrl: 'pages/docs/error/platform/DEPLOYMENT_NOT_FOUND.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Platform Error
+
+The deployment was not found in the platform infrastructure layer.
+
+<br />
+
+<Note label={false}>
+  <b>404</b>: Not found
+  <br />
+  Code: <InlineCode>DEPLOYMENT_NOT_FOUND</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- Make sure the link you accessed is correct.
+- If the link is correct and you were not expecting this error; **[Contact Support](mailto:support@zeit.co)**.
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

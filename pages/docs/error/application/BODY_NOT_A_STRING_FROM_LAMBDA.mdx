@@ -1,0 +1,38 @@
+import Standard from '~/components/layout/standard'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Body Not A String From Serverless Function (Lambda)',
+  description: 'The Serverless Function did not respond with a string.',
+  editUrl: 'pages/docs/error/application/BODY_NOT_A_STRING_FROM_LAMBDA.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Application Error
+
+The requested Serverless Function from the application did not return a string as the body.
+
+This is an error with the application.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>BODY_NOT_A_STRING_FROM_LAMBDA</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- Check the application logs, which can be found at the host URL under [the `/_logs` path](/docs/v2/advanced/concepts/special-paths#logs-view), for example:
+  ```
+  https://my-deployment-lwbxweoqjo.now.sh/_logs
+  ```
+- Check if the application is returning an empty response, or possibly null.
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}

@@ -1,9 +1,15 @@
 import cn from 'classnames'
 import ZenContext from '~/lib/zen-context'
 
-const getContent = (zenModeActive, children) => {
+const getContent = (zenModeActive, children, center, small) => {
   return (
-    <div className={cn('content', zenModeActive ? 'content-zen-mode' : '')}>
+    <div
+      className={cn('content', {
+        'content-zen-mode': zenModeActive,
+        center,
+        small
+      })}
+    >
       {children}
       <style jsx>{`
         .content {
@@ -11,6 +17,14 @@ const getContent = (zenModeActive, children) => {
           flex-direction: column;
           flex: 0 0 100%;
           padding-bottom: 64px;
+        }
+
+        .content.small {
+          flex: 0 0 672px;
+        }
+
+        .content.center {
+          margin: 0 auto;
         }
 
         :global(.sidebar) + .content {
@@ -36,9 +50,9 @@ const getContent = (zenModeActive, children) => {
   )
 }
 
-const Content = ({ children }) => (
+const Content = ({ children, center, small }) => (
   <ZenContext.Consumer>
-    {zenModeActive => getContent(zenModeActive, children)}
+    {zenModeActive => getContent(zenModeActive, children, center, small)}
   </ZenContext.Consumer>
 )
 

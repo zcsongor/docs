@@ -1,0 +1,34 @@
+import Standard from '~/components/layout/standard'
+import Snippet from '~/components/snippet'
+import Caption from '~/components/text/caption'
+import Note from '~/components/text/note'
+import { InlineCode } from '~/components/text/code'
+
+export const meta = {
+  title: 'Internal Missing Response From Cache',
+  description: 'An error occurred in the platform infrastructure layer.',
+  editUrl: 'pages/docs/error/platform/INTERNAL_MISSING_RESPONSE_FROM_CACHE.mdx',
+  lastEdited: '2019-09-19T04:07:22.000Z'
+}
+
+#### Platform Error
+
+An error occurred in the platform infrastructure layer.
+
+<br />
+
+<Note label={false}>
+  Code: <InlineCode>INTERNAL_MISSING_RESPONSE_FROM_CACHE</InlineCode>
+</Note>
+
+---
+
+#### Troubleshoot
+
+- **[Contact Support](mailto:support@zeit.co)**.
+
+export default ({ children }) => <Standard meta={meta}>{children}</Standard>
+
+export const config = {
+  amp: 'hybrid'
+}
