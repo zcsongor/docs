@@ -3,11 +3,11 @@ import Note from '~/components/text/note'
 import { InlineCode } from '~/components/text/code'
 
 export const meta = {
-  title: 'Serverless Function (Lambda) Invocation Timeout',
+  title: 'Serverless Function Invocation Timeout',
   description:
     'The requested Serverless Function reached the request timeout threshold.',
   editUrl: 'pages/docs/error/application/LAMBDA_INVOCATION_TIMEOUT.mdx',
-  lastEdited: '2019-09-21T00:25:39.000Z'
+  lastEdited: '2019-09-23T15:41:06.000Z'
 }
 
 #### Application Error
@@ -17,6 +17,8 @@ The request for a Serverless Function reached the timeout threshold (5 minutes).
 <br />
 
 <Note label={false}>
+  <b>502</b>: Bad Gateway
+  <br />
   Code: <InlineCode>LAMBDA_INVOCATION_TIMEOUT</InlineCode>
 </Note>
 
