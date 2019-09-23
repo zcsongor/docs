@@ -63,8 +63,6 @@ class TableHeadCell extends Component {
       ...other
     } = this.props
 
-    console.log(children)
-
     return createElement(
       'th',
       {
