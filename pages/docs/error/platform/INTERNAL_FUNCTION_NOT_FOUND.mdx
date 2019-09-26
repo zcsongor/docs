@@ -3,9 +3,9 @@ import Note from '~/components/text/note'
 import { InlineCode } from '~/components/text/code'
 
 export const meta = {
-  title: 'Serverless Function Not Found',
+  title: 'Serverless Function not found.',
   description: 'The requested Serverless Function was not found.',
-  editUrl: 'pages/docs/error/platform/LAMBDA_NOT_FOUND.mdx',
+  editUrl: 'pages/docs/error/platform/INTERNAL_LAMBDA_NOT_FOUND.mdx',
   lastEdited: '2019-09-23T15:41:06.000Z'
 }
 
@@ -16,9 +16,9 @@ The requested Serverless Function was not found by the platform infrastructure l
 <br />
 
 <Note label={false}>
-  <b>404</b>: Not found
+  <b>500</b>: Internal Error
   <br />
-  Code: <InlineCode>LAMBDA_NOT_FOUND</InlineCode>
+  Code: <InlineCode>FUNCTION_NOT_FOUND</InlineCode>
 </Note>
 
 ---
