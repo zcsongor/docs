@@ -33,8 +33,8 @@ Additionally, the following are not cached:
 When providing a `Cache-Control` is sent from your Serverless Function, it can include any of the following directives, separated by a comma:
 
 - `s-maxage=N`
-- `maxage=N, public`
-- `maxage=N, immutable`
+- `max-age=N, public`
+- `max-age=N, immutable`
 
 <Note>
   Above; where <InlineCode>N</InlineCode> is the number of seconds the response
@@ -57,7 +57,7 @@ module.exports = (request, response) => {
 
 ### Recommended `Cache-Control`
 
-We recommend that you set your cache to have `maxage=0, s-maxage=86400`, with changing `86400` to the amount of seconds you want your response to be cached for.
+We recommend that you set your cache to have `max-age=0, s-maxage=86400`, with changing `86400` to the amount of seconds you want your response to be cached for.
 
 This recommendation will tell browsers not to cache and let our edge cache the responses and invalidate when your deployments update, so you never have to worry about stale content.
 
